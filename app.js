@@ -30,6 +30,7 @@ app.get('/api/logindetails', (req, res) => {
 	});
 }); 
 
+//To route to userdetails for retrieving data for a specific ID
 app.get('/api/logindetails/:_id', (req, res) => {
 	Logindetail.getlogindetailsbyId(req.params._id, (err, logindetails) => {
 		if(err){
@@ -39,34 +40,36 @@ app.get('/api/logindetails/:_id', (req, res) => {
 	});
 });
 
-app.post('/api/books', (req, res) => {
-	var book = req.body;
-	Book.addBook(book, (err, book) => {
+//To route to userdetails for adding data
+app.post('/api/logindetails', (req, res) => {
+	var logindetails = req.body;
+	Logindetail.addlogindetails(logindetails, (err, logindetails) => {
 		if(err){
 			throw err;
 		}
-		res.json(book);
+		res.json(logindetails);
 	});
 });
 
-app.put('/api/books/:_id', (req, res) => {
+//To route to userdetails for upadting a particular data
+app.put('/api/logindetails/:_id', (req, res) => {
 	var id = req.params._id;
-	var book = req.body;
-	Book.updateBook(id, book, {}, (err, book) => {
+	var logindetails = req.body;
+	Logindetail.updatelogindetails(id, logindetails, {}, (err, logindetails) => {
 		if(err){
 			throw err;
 		}
-		res.json(book);
+		res.json(logindetails);
 	});
 });
 
-app.delete('/api/books/:_id', (req, res) => {
+app.delete('/api/logindetails/:_id', (req, res) => {
 	var id = req.params._id;
-	Book.removeBook(id, (err, book) => {
+	Logindetail.removelogindetails(id, (err, logindetails) => {
 		if(err){
 			throw err;
 		}
-		res.json(book);
+		res.json(logindetails);
 	});
 });
 

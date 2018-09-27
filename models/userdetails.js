@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// Genre Schema
+// Login Detail Schema
 const logindetailSchema = mongoose.Schema({
 	fname:{
 		type: String,
@@ -31,4 +31,32 @@ const Logindetail = module.exports = mongoose.model('Logindetail', logindetailSc
 // Get User Details
 module.exports.getlogindetails = (callback, limit) => {
 	Logindetail.find(callback).limit(limit);
+}
+
+// Get Book with an ID
+module.exports.getlogindetailsbyId = (id, callback) => {
+	Logindetail.findById(id, callback);
+}
+
+// Add Book
+module.exports.addlogindetails = (logindetails, callback) => {
+	Logindetail.create(logindetails, callback);
+}
+
+// Update Book
+module.exports.updatelogindetails = (id, logindetails, options, callback) => {
+	var query = {_id: id};
+	var update = {
+		fname: logindetails.fname,
+		lname: logindetails.lname,
+		emailid: logindetails.emailid,
+		password: logindetails.password
+	}
+	Logindetail.findOneAndUpdate(query, update, options, callback);
+}
+
+// Delete Book
+module.exports.removelogindetails = (id, callback) => {
+	var query = {_id: id};
+	Logindetail.remove(query, callback);
 }
