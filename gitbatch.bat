@@ -1,3 +1,4 @@
+@echo off
 call git add .
 set /p id="Enter Commit Description: "\r\n
 call git commit -m "%id%"
