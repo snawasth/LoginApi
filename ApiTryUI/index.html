@@ -1,0 +1,92 @@
+<html>
+<head>
+	<title>:: SEARCH SSN ::</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		
+		
+</head>
+<body>
+<!-- The Banner -->
+<nav class="navbar navbar-inverse navbar-fixed-top role="navigation">
+	<div class="container">
+	<!-- <center> -->
+	<div class="navbar-header">
+		<img src="asset/logo.png" height=80 width=120>
+			<div class="navbar-brand">
+			<div class="navbar-text">ADM MFAS - SSN SEARCH</div>
+			</div>
+			<!-- </div> -->
+		
+			</div>
+	</div>
+	
+	</nav>
+	
+	<div class="container">
+	<div class="row row-content">
+	<div class="col-sm-4 col-sm-offset-5">
+	
+		<div class="ssntxt"><input type="text" placeholder="ENTER THE SSN" id="txtssn"></div>
+		<button class="btnsearch" onclick="getdetails();">Search</button>
+		<button class="btnres" onclick="reload();">Reset</button>
+		
+		<div id="output"></div>
+		
+		</div>
+		</div>
+		</div>
+	
+	
+	
+	<div class="container">
+	
+	<div class="col-sm-6 col-xs-12 col-sm-offset-3">
+	<div class="divtable">
+		<div class="row">
+			<div class="col-sm-3 col-xs-12 lable"><b>Customer ID:</b></div>
+			<div class="col-sm-3 col-xs-12 result"><input type="text" placeholder=" " id="txt_cust_num" readonly></div>
+			<div class="col-sm-3 col-xs-12 lable"><b>First Name:</b></div>
+			<div class="col-sm-3 col-xs-12 result"><input type="text" placeholder=" " id="txt_cust_fname" readonly></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3 col-xs-12 lable"><b>SSN:</b></div>
+			<div class="col-sm-3 col-xs-12 result"><input type="text" placeholder="" id="txt_cust_ssn" readonly></div>
+			<div class="col-sm-3 col-xs-12 lable"><b>Last Name:</b></div>
+			<div class="col-sm-3 col-xs-12 result"><input type="text" placeholder=" " id="txt_cust_lname" readonly></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3 col-xs-12 lable"><b>Date of Birth:</b></div>
+			<div class="col-sm-3 col-xs-12 result"><input type="text" placeholder="" id="txt_cust_dob" readonly></div>
+			<div class="col-sm-3 col-xs-12 lable"><b>Salary:</b></div>
+			<div class="col-sm-3 col-xs-12 result"><input type="text" placeholder=" " id="txt_cust_sal" readonly></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3 col-xs-12 lable"><b>Address Line 1:</b></div>
+			<div class="col-sm-3 col-xs-12 result"><input type="text" placeholder="" id="txt_cust_add" readonly></div>
+			<div class="col-sm-3 col-xs-12 lable"><b>City:</b></div>
+			<div class="col-sm-3 col-xs-12 result"><input type="text" placeholder=" " id="txt_cust_city" readonly></div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3 col-xs-12 lable"><b>State:</b></div>
+			<div class="col-sm-3 col-xs-12 result"><input type="text" placeholder="" id="txt_cust_state" readonly></div>
+			<div class="col-sm-3 col-xs-12 lable"><b>ZIP Code:</b></div>
+			<div class="col-sm-3 col-xs-12 result"><input type="text" placeholder=" " id="txt_cust_zip" readonly></div>
+		</div>
+		<div class="row" id="cust_elig">
+			<div class="col-sm-3 col-xs-12 lable"><b>Eligibility:</b></div>
+			<div class="col-sm-1 col-xs-12 result"><input type="text" placeholder="" id="txt_cust_elig" readonly></div>
+			<!-- <div class="col-sm-5" id="elig_check_text"></div> -->
+		</div>
+	</div>
+	</div>
+	</div>
+	
+	<!-- </center> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/ssnsearch.js"></script>
+		<script type="text/javascript" src="js/inputfield.js"></script>
+		<script type="text/javascript" src="js/effects.js"></script>	
+</body>
+</html>
